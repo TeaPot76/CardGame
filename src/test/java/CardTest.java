@@ -21,4 +21,8 @@ public class CardTest {
         assertEquals(Rank.EIGHT, card.getRank());
     }
 
+    @Test
+    public void hasValue(){
+        assertEquals(8, card.getValue());
+    }
 }

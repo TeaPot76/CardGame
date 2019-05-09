@@ -33,7 +33,6 @@ public class Deck {
      }
 
     public Card removeCard() {
-        this.shuffle();
         return this.cards.remove(0);
     }
 }

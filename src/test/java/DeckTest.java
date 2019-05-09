@@ -15,7 +15,7 @@ public class DeckTest {
     @Before
     public void before(){
         deck = new Deck();
-
+        deck.populateCards();
         card1 = new Card(Rank.ACE, Suit.HEART);
         card2 = new Card(Rank.QUEEN, Suit.HEART);
         card3 = new Card(Rank.EIGHT, Suit.SPADE);
@@ -31,20 +31,17 @@ public class DeckTest {
 
     @Test
     public void canCreateAllCards(){
-        deck.populateCards();
+
         assertEquals(52, deck.getLength() );
     }
 
 
-//    @Test
-//    public void canShuffle(){
-//
-//        deck.shuffle();
-////        assertEquals(Rank.ACE, card1.getRank());
-////        assertEquals(Suit.HEART, card1.getSuit());
-//        assertEquals(card1, deck.removeCard());
-//
-//    }
+    @Test
+    public void canRemoveCard(){
+        deck.removeCard();
+        assertEquals(51, deck.getLength());
+
+    }
 
 
 }
